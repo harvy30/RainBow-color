@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RainBow Color to each Element</title>
+    <style>
+    div > p:nth-child(7n + 1) {
+        background: violet;
+    }
+    
+    div > p:nth-child(7n + 2) {
+        background: indigo;
+    }
+    
+    div > p:nth-child(7n + 3) {
+        background: blue;
+    }
+    
+    div > p:nth-child(7n + 4) {
+        background: green;
+    }
+    
+    div > p:nth-child(7n + 5) {
+        background: yellow;
+    }
+    
+    div > p:nth-child(7n + 6) {
+        background: orange;
+    }
+    
+    div > p:nth-child(7n + 7) {
+        background: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="para"></div>
+    <script>
+    var paraDiv = document.getElementById('para')
+    window.addEventListener('load', function() {
+        for (var i = 0; i < 840; i++) {
+            var p = document.createElement("p")
+            p.innerHTML = "RainBow Colors";
+
+            paraDiv.appendChild(p);
+
+            var para = document.getElementsByTagName("p");
+
+
+            // switch (i % 7) {
+            //     case 0:
+            //         para[i].style.background = "violet";
+            //         break;
+            //     case 1:
+            //         para[i].style.background = "indigo";
+            //         break;
+            //     case 2:
+            //         para[i].style.background = "blue";
+            //         break;
+            //     case 3:
+            //         para[i].style.background = "green";
+            //         break;
+            //     case 4:
+            //         para[i].style.background = "yellow";
+            //         break;
+            //     case 5:
+            //         para[i].style.background = "red";
+            //         break;
+            //     case 6: 
+            //         para[i].style.background =  "orange";
+            //         break;
+
+            // }
+        }
+    }, false)
+    </script>
+</body>
+
+</html>
